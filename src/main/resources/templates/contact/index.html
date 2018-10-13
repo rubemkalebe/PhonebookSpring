@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorator="layout">
+<head>
+ 	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Contact List</title>
+</head>
+<body>
+
+	<div layout:fragment="content">
+		<h1>Contact List</h1>
+		<hr />
+		<a th:href="@{/contacts/new}" class="btn btn-success">New Contact</a><br/><br/>
+		
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Name</th> 
+					<th>Phone</th> 
+					<th>Email</th> 
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="contact : ${listContact}">
+					<td th:text="${contact.name}"></td> 
+					<td th:text="${contact.phone}"></td>
+					<td th:text="${contact.email}"></td> 
+					<td>
+							<a th:href="@{/contacts/{id}(id = ${contact.id})}" class="btn btn-primary" >Show</a> 
+					 		<a th:href="@{/contacts/{id}/edit(id = ${contact.id})}" class="btn btn-info">Edit</a> 
+					 		<a th:href="${'contacts/'+ contact.id +'/delete'}" class="btn btn-danger">Destroy</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	  </div>
+	  
+	  
+</body>
+</html>
