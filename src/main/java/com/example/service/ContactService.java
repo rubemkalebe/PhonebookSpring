@@ -26,18 +26,12 @@ public class ContactService {
 		this.contactRepository.delete(c);
 	}
 	
-	@Transactional(readOnly = false)
-	public void update(Contact old, Contact c) {
-		this.remove(old);
-		this.add(c);
-	}
-	
-	//@Transactional(readOnly = true)
+	@Transactional(readOnly = true)
 	public List<Contact> findAll() {
 		return this.contactRepository.findAll();
 	}
 	
-	//@Transactional(readOnly = true)
+	@Transactional(readOnly = true)
 	public Optional<Contact> findById(Integer id) {
 		return this.contactRepository.findById(id); 
 	}

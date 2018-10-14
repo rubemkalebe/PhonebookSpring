@@ -9,8 +9,8 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>demo</name>
-	<description>Demo project for Spring Boot</description>
+	<name>phonebook</name>
+	<description>Basic Phonebook</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -63,7 +63,6 @@
 		<dependency>
 		    <groupId>org.postgresql</groupId>
 		    <artifactId>postgresql</artifactId>
-		    <version>42.2.2</version>
 		</dependency>
 	</dependencies>
 

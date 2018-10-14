@@ -26,9 +26,9 @@
 				<span th:text="${contact.email}"></span> 
 			</div> 
 
-			<a th:href="@{/contacts}" class="btn btn-primary" >Back to list Contact</a> 
-			<a th:href="@{/contacts/{id}/edit(id = ${contact.id})}" class="btn btn-info">Edit this record</a>
-			<a th:href="${contact.id +'/delete'}" class="btn btn-danger">Delete this record</a>
+			<a th:href="@{/contacts}" class="btn btn-primary" >Back</a> 
+			<a th:href="@{/contacts/{id}/edit(id = ${contact.id})}" class="btn btn-info">Edit</a>
+			<a th:href="${contact.id +'/delete'}" class="btn btn-danger">Delete</a>
 			
 		</div>
 	</body>
